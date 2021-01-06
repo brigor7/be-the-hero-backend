@@ -7,7 +7,7 @@ module.exports = {
       const list = await connection('ongs').select('*');
       return response.json(list);
     } catch (error) {
-      console.log('### ' + error);
+      console.log('###Error list ' + error);
     }
   },
 
@@ -21,7 +21,16 @@ module.exports = {
 
       return response.status(201).json({ id });
     } catch (error) {
-      console.log('### ' + error);
+      console.log('###Error create ' + error);
+    }
+  },
+  async delete(request, response) {
+    const id = request.params;
+    try {
+      await connection('ongs').delete().where({ id }).del();
+      return response.status(200).json({ id });
+    } catch (error) {
+      console.log('###Error delete' + error);
     }
   },
 };
