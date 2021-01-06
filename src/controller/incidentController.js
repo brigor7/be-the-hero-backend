@@ -8,15 +8,23 @@ module.exports = {
     try {
       const [count] = await connection('incidents').count();
 
-      const list = await connection('incidents')
-        .select('*')
+      const incidents = await connection('incidents')
+        .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
         .limit(5)
-        .offset((page - 1) * 5);
+        .offset((page - 1) * 5)
+        .select(
+          'incidents.*',
+          'ongs.name',
+          'ongs.email',
+          'ongs.whatsapp',
+          'ongs.city',
+          'ongs.uf'
+        );
 
       /**Inserindo o total no header */
       response.header('x-Total-Count', count['count(*)']);
 
-      return response.json(list);
+      return response.json(incidents);
     } catch (error) {}
     console.error('###Error Incident index' + error);
   },
