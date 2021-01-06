@@ -2,9 +2,15 @@ const connection = require('../database/connection');
 
 module.exports = {
   async index(request, response) {
+    /**Realizando controle de transação */
+    const { page = 1 } = request.query;
+
     try {
-      const list = await connection('incidents').select('*');
-      response.json(list);
+      const list = await connection('incidents')
+        .select('*')
+        .limit(5)
+        .offset((page - 1) * 5);
+      return response.json(list);
     } catch (error) {}
     console.error('###Error Incident index' + error);
   },
