@@ -29,7 +29,18 @@ module.exports = {
 
   async delete(request, response) {
     const { id } = request.params;
+    const ong_id = request.headers.authorization;
     try {
+      /**Pesquisar o registro verificando se este é do ong_id */
+      const incident = await connection('incidents')
+        .select('ong_id')
+        .where({ id })
+        .first();
+
+      if (incident.ong_id !== ong_id) {
+        return response.status(401).json({ error: 'Operation not authotized' });
+      }
+      /**Excluir o registro */
       await connection('incidents').delete().where({ id });
       return response.status(204).send();
     } catch (error) {}
