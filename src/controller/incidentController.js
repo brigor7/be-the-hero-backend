@@ -6,10 +6,16 @@ module.exports = {
     const { page = 1 } = request.query;
 
     try {
+      const [count] = await connection('incidents').count();
+
       const list = await connection('incidents')
         .select('*')
         .limit(5)
         .offset((page - 1) * 5);
+
+      /**Inserindo o total no header */
+      response.header('x-Total-Count', count['count(*)']);
+
       return response.json(list);
     } catch (error) {}
     console.error('###Error Incident index' + error);
