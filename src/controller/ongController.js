@@ -25,9 +25,9 @@ module.exports = {
     }
   },
   async delete(request, response) {
-    const id = request.params;
+    const { id } = request.params;
     try {
-      await connection('ongs').delete().where({ id }).del();
+      await connection('ongs').delete().where({ id });
       return response.status(200).json({ id });
     } catch (error) {
       console.log('###Error delete' + error);
