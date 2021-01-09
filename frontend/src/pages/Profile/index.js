@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logoImg from '../../assets/logo.svg';
-import { FiPower } from 'react-icons/fi';
+import { FiPower, FiDelete } from 'react-icons/fi';
 
 import './style.css';
 
@@ -10,6 +10,7 @@ export default function Profile() {
     <div className="profile-container">
       <header>
         <img src={logoImg} alt="Be The Hero" />
+
         <span>Bem vindo(a) Apad</span>
         <Link className="button" to="/incidents/new">
           Cadastrar novo caso
@@ -18,6 +19,73 @@ export default function Profile() {
           <FiPower size={24} color="#e02e41" />
         </button>
       </header>
+      <h1>Casos Cadastrados</h1>
+      <div className="casos-container">
+        <ul>
+          <li>
+            <strong>Caso:</strong>
+            <p>Cadela atropelada</p>
+            <strong>Descrição</strong>
+            <p>
+              A cadelinha mai foi atropelada no bairro Parque 10 e teve que
+              passar por uma cirurgia
+            </p>
+            <strong>Valor</strong>
+            <p>R$ 1200.00</p>
+            <button>
+              <FiDelete size="18" color="#414130"></FiDelete>
+            </button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <strong>Caso</strong>
+            <p>Cadela atropelada</p>
+            <strong>Descrição</strong>
+            <p>
+              A cadelinha mai foi atropelada no bairro Parque 10 e teve que
+              passar por uma cirurgia
+            </p>
+            <strong>Valor</strong>
+            <p>R$ 1200.00</p>
+            <button>
+              <FiDelete size="18" color="#f6f6f6"></FiDelete>
+            </button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <strong>Caso</strong>
+            <p>Cadela atropelada</p>
+            <strong>Descrição</strong>
+            <p>
+              A cadelinha mai foi atropelada no bairro Parque 10 e teve que
+              passar por uma cirurgia
+            </p>
+            <strong>Valor</strong>
+            <p>R$ 1200.00</p>
+            <button>
+              <FiDelete size="18" color="#f6f6f6"></FiDelete>
+            </button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <strong>Caso</strong>
+            <p>Cadela atropelada</p>
+            <strong>Descrição</strong>
+            <p>
+              A cadelinha mai foi atropelada no bairro Parque 10 e teve que
+              passar por uma cirurgia
+            </p>
+            <strong>Valor</strong>
+            <p>R$ 1200.00</p>
+            <button>
+              <FiDelete size="18" color="#f6f6f6"></FiDelete>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

@@ -40,3 +40,55 @@
 .profile-container header button:hover {
   border: 1px solid #252525;
 }
+
+.profile-container h1 {
+  margin-bottom: 25px;
+}
+
+.casos-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.casos-container ul {
+  display: inline-flex;
+  list-style: none;
+  margin-left: 20px;
+}
+
+.profile-container ul li {
+  background: #fff;
+  position: relative;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.profile-container ul li button {
+  position: absolute;
+  right: 24px;
+  height: 24px;
+  top: 24px;
+  border: 0;
+}
+
+.profile-container ul li button:hover {
+  opacity: 0.8;
+}
+
+.profile-container ul li strong {
+  display: block;
+  color: #414141;
+}
+
+.profile-container ul li p + strong {
+  margin-top: 16px;
+}
+
+.profile-container ul li p {
+  color: #737380;
+  line-height: 21px;
+  font-size: 16px;
+  width: 250px;
+}
