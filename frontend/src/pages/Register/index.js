@@ -10,7 +10,9 @@ export default function Register() {
     <div className="register-container">
       <div className="content">
         <section>
-          <img src={logoImg} alt="Be the Hero" />
+          <Link to="/">
+            <img src={logoImg} alt="Be the Hero" />
+          </Link>
 
           <h1>Cadastrar</h1>
           <p>

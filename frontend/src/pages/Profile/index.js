@@ -9,7 +9,9 @@ export default function Profile() {
   return (
     <div className="profile-container">
       <header>
-        <img src={logoImg} alt="Be The Hero" />
+        <Link to="/">
+          <img src={logoImg} alt="Be The Hero" />
+        </Link>
 
         <span>Bem vindo(a) Apad</span>
         <Link className="button" to="/incidents/new">
