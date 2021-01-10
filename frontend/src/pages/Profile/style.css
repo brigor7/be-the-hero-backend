@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 960px;
   padding: 0 30px;
-  margin: 32px auto;
+  margin: 5px auto;
 }
 
 .profile-container header {
@@ -16,7 +16,7 @@
 }
 
 .profile-container header img {
-  width: 70px;
+  width: 90px;
 }
 
 .profile-container header a {
@@ -42,25 +42,24 @@
 }
 
 .profile-container h1 {
-  margin-bottom: 25px;
+  margin: 25px 0 15px 25px;
 }
 
 .casos-container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .casos-container ul {
-  display: inline-flex;
   list-style: none;
-  margin-left: 20px;
 }
 
 .profile-container ul li {
   background: #fff;
   position: relative;
-  padding: 25px;
+  padding: 30px 30px 20px 30px;
   border-radius: 8px;
   margin-bottom: 25px;
 }
@@ -90,5 +89,5 @@
   color: #737380;
   line-height: 21px;
   font-size: 16px;
-  width: 250px;
+  max-width: 350px;
 }
