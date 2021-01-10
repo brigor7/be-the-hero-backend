@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logoImg from '../../assets/logo.svg';
-import { FiPower, FiDelete } from 'react-icons/fi';
+import { FiPower, FiTrash2 } from 'react-icons/fi';
 
 import './style.css';
 
@@ -35,7 +35,7 @@ export default function Profile() {
             <strong>Valor</strong>
             <p>R$ 1200.00</p>
             <button>
-              <FiDelete size="18" color="#414130"></FiDelete>
+              <FiTrash2 size="18" color="#414130"></FiTrash2>
             </button>
           </li>
         </ul>
@@ -51,7 +51,7 @@ export default function Profile() {
             <strong>Valor</strong>
             <p>R$ 1200.00</p>
             <button>
-              <FiDelete size="18" color="#f6f6f6"></FiDelete>
+              <FiTrash2 size="18" color="#414130"></FiTrash2>
             </button>
           </li>
         </ul>
@@ -67,7 +67,7 @@ export default function Profile() {
             <strong>Valor</strong>
             <p>R$ 1200.00</p>
             <button>
-              <FiDelete size="18" color="#f6f6f6"></FiDelete>
+              <FiTrash2 size="18" color="#414130"></FiTrash2>
             </button>
           </li>
         </ul>
@@ -83,7 +83,7 @@ export default function Profile() {
             <strong>Valor</strong>
             <p>R$ 1200.00</p>
             <button>
-              <FiDelete size="18" color="#f6f6f6"></FiDelete>
+              <FiTrash2 size="18" color="#414130"></FiTrash2>
             </button>
           </li>
         </ul>
