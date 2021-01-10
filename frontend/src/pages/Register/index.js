@@ -30,7 +30,9 @@ export default function Register() {
             <input placeholder="Cidade"></input>
             <input placeholder="UF" width="80"></input>
           </div>
-          <button class="button">Cadastrar</button>
+          <button class="button" onSubmit="/incident/new">
+            Cadastrar
+          </button>
         </form>
       </div>
     </div>
