@@ -64,6 +64,7 @@
   margin-bottom: 25px;
 }
 
+/**Css de ajuste do botão trash2/delete **/
 .profile-container ul li button {
   position: absolute;
   right: 24px;
@@ -72,8 +73,8 @@
   border: 0;
 }
 
-.profile-container ul li button:hover {
-  opacity: 0.8;
+.profile-container ul li button svg:hover path {
+  fill: #414141;
 }
 
 .profile-container ul li strong {
